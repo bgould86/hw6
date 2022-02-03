@@ -3,7 +3,7 @@ const searchCities = [];
 // functions
 //grabs coordinates
 function handleCoords(searchCity) {
-  const fetchUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=4b9f7dc3f8536150bc0eb915e8e4a81b`;
+  const fetchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=4b9f7dc3f8536150bc0eb915e8e4a81b`;
 
   fetch(fetchUrl)
     .then(function (response) {
@@ -33,7 +33,7 @@ function handleCurrentWeather(coordinates, city) {
 
 //displays current weather
 function displayCurrentWeather(currentCityData, cityName) {
-  let weatherIcon = `http://openweathermap.org/img/wn/${currentCityData.weather[0].icon}.png`;
+  let weatherIcon = `https://openweathermap.org/img/wn/${currentCityData.weather[0].icon}.png`;
 
   document.querySelector("#currentWeather").innerHTML = `<h2><strong>${cityName} (${moment.unix(currentCityData.dt).format("l")})</strong> <img src="${weatherIcon}"></h2> <div class="mb-1">Temp: ${currentCityData.temp} \xB0F</div> <div class="mb-1 mt-1">Wind: ${currentCityData.wind_speed} MPH</div> <div class="mb-1 mt-1">Humidity: ${currentCityData.humidity}%</div> <div class="mb-1 mt-1">UV Index: <label id="uviDiv" class="p-1">${currentCityData.uvi}</label></div>`;
 
@@ -56,7 +56,7 @@ function displayFiveDayWeather(fiveDayCityData) {
   document.querySelector("#fiveDayWeather").innerHTML = "";
 
   cityData.forEach((day) => {
-    let weatherIcon = `http://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
+    let weatherIcon = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
     document.querySelector("#fiveDayWeather").innerHTML += `<div id="cards" class="col-sm m-1 p-2 card"><div><strong>${moment.unix(day.dt).format("l")}</strong></div> <div><img src="${weatherIcon}"></div> <div class="mb-1">Temp: ${day.temp.day} \xB0F</div> <div class="mb-1 mt-1">Wind: ${day.wind_speed} MPH</div> <div class="mb-1 mt-1">Humidity: ${day.humidity}%</div> </div>`;
   });
 }
