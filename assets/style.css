@@ -1,0 +1,29 @@
+#cards {
+  background-color: darkblue;
+  color: white;
+}
+
+#header {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(270deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+}
+
+#uviDiv {
+  max-height: fit-content;
+  max-width: fit-content;
+  color: white;
+  border-radius: 10px;
+}
+
+.favorable {
+  background-color: green;
+}
+
+.moderate {
+  background-color: yellow;
+}
+
+.high {
+  background-color: red;
+}
