@@ -56,7 +56,7 @@ function displayFiveDayWeather(fiveDayCityData) {
   document.querySelector("#fiveDayWeather").innerHTML = "";
 
   cityData.forEach((day) => {
-    let weatherIcon = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
+    let weatherIcon = `https://openwea..org/img/wn/${day.weather[0].icon}.png`;
     document.querySelector("#fiveDayWeather").innerHTML += `<div id="cards" class="col-sm m-1 p-2 card"><div><strong>${moment.unix(day.dt).format("l")}</strong></div> <div><img src="${weatherIcon}"></div> <div class="mb-1">Temp: ${day.temp.day} \xB0F</div> <div class="mb-1 mt-1">Wind: ${day.wind_speed} MPH</div> <div class="mb-1 mt-1">Humidity: ${day.humidity}%</div> </div>`;
   });
 }

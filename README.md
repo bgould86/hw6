@@ -10,5 +10,5 @@ Build a weather dashboard that will run in the browser and feature dynamically u
 
 ## Links to the Application
 
-- Here is the repo: [bgould86/hw6](https://github.com/bgould86/hw6)
-- Here is the pages: [bgould86/pages](https://bgould86.github.io/hw6/)
+- Here is the repo: [bgould86/weather-dashboard](https://github.com/bgould86/weather-dashboard)
+- Here is the pages: [bgould86/weather-dashboard](https://bgould86.github.io/weather-dashboard/)
